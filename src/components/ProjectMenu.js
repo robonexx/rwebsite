@@ -17,7 +17,7 @@ export default function ProjectMenu() {
       <div className='proj-menu'>
         <div className='inside-menu'>
           <ul className='proj-nav-links'>
-            {content.map(({url, title, img, id}) => (
+            {content.map(({ url, title, img, id }) => (
               <li key={id}>
                 <a href='' onClick={(e) => handleClick(e, url)}>
                   {title}
@@ -47,13 +47,13 @@ const content = [
     id: 2,
   },
   {
-    url: '#2',
+    url: '/images/kandyzhome.png',
     title: 'Kandyz (internship',
     img: '/images/kandyzhome.png',
     id: 3,
   },
   {
-    url: '#1',
+    url: '/images/bev.png',
     title: 'Bev',
     img: '/images/bev.png',
     id: 4,
