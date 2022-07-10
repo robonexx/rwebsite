@@ -1,48 +1,62 @@
-import React from 'react';
+import { useState } from 'react';
 
 // styles
 import './ProjectMenu.scss';
 
 export default function ProjectMenu() {
+  const [projUrl, setProjUrl] = useState('https://lockerlegends.org');
+
+  const handleClick = (e, url) => {
+    e.preventDefault();
+    setProjUrl(url);
+  };
+
   return (
     <div className='projects'>
       <h1>Projects I worked on</h1>
       <div className='proj-menu'>
         <div className='inside-menu'>
           <ul className='proj-nav-links'>
-            {content.map(({ url, title, img }) => (
-              <li key={url}>
-                <a href={url}>{title}</a>
+            {content.map(({url, title, img, id}) => (
+              <li key={id}>
+                <a href='' onClick={(e) => handleClick(e, url)}>
+                  {title}
+                </a>
                 <img src={img} alt={title} />
               </li>
             ))}
           </ul>
         </div>
       </div>
+      <iframe src={projUrl} frameborder='0'></iframe>
     </div>
   );
 }
 
 const content = [
   {
-    url: '#1',
+    url: 'https://lockerlegends.org',
     title: 'LockerLegends',
     img: '/images/lln1.png',
+    id: 1,
   },
   {
-    url: '#2',
+    url: 'https://streetartmarket.se',
     title: 'Street Art Market',
     img: '/images/streetartmarket.png',
+    id: 2,
   },
   {
     url: '#2',
     title: 'Kandyz (internship',
     img: '/images/kandyzhome.png',
+    id: 3,
   },
   {
     url: '#1',
     title: 'Bev',
     img: '/images/bev.png',
+    id: 4,
   },
 ];
 
