@@ -32,10 +32,11 @@
             font-size: clamp(10rem, 15vw, 15vw);
             text-align: left;
             font-weight: 900;
-            font-family: sans-serif;
+            font-family: 'Audiowide', cursive;
             mix-blend-mode: multiply;
             user-select: none;
-            line-height: 10rem;
+            line-height: clamp(10rem, 10vw, 10vw);
+            text-shadow: 5px -2px 1px rgb(0, 0, 0);
         }
     }
 }
