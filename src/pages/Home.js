@@ -17,7 +17,7 @@ export default function Home() {
           #Coding{'>'}
         </h1>
       </div>
-      <div className="project-container">
+      <div className="project-container" id="work">
         <ProjectMenu />
       </div>
     </div>

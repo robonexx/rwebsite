@@ -1,10 +1,15 @@
 import { useState } from 'react';
-
+import Modal from './Modal';
+import { motion } from 'framer-motion';
 // styles
 import './ProjectMenu.scss';
 
 export default function ProjectMenu() {
   const [projUrl, setProjUrl] = useState('https://lockerlegends.org');
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => setModalOpen(false);
+  const open = () => setModalOpen(true);
 
   const handleClick = (e, url) => {
     e.preventDefault();
@@ -28,7 +33,21 @@ export default function ProjectMenu() {
           </ul>
         </div>
       </div>
-      <iframe src={projUrl} frameborder='0'></iframe>
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className='btn'
+        onClick={() => (modalOpen ? close() : open())}
+      >
+        Check project
+      </motion.button>
+      {modalOpen && (
+        <Modal
+          modalOpen={modalOpen}
+          handleClose={close}
+          content={<iframe src={projUrl} frameBorder='0'></iframe>}
+        ></Modal>
+      )}
     </div>
   );
 }
@@ -60,17 +79,12 @@ const content = [
   },
 ];
 
-// use this in scss
-// and then intersection observer to
-// create a class so the menu will
-// have and animation to enter screen
-
-/* 
-        @for $i from 0 through 4 {
-            li:nth-child(#{$i + 1}n) {
-                a {
-                    transition-delay: #{$i/10 + 0.8}s;
-                }
-            }
-        }
+/* const ModalContent = (e, projUrl) => {
+  e.preventDefault();
+  return (
+    <>
+      <iframe src={projUrl} frameBorder='0'></iframe>
+    </>
+  );
+};
  */

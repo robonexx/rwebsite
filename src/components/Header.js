@@ -1,4 +1,5 @@
 import React from 'react';
+import Nav from './Nav';
 
 // styles
 import './Header.scss';
@@ -8,6 +9,7 @@ export default function Header() {
       <h1>
         {'< '}Kreative Coding{' >'}
       </h1>
+      <Nav/>
     </div>
   );
 }
