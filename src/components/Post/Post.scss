@@ -1,0 +1,23 @@
+.post {
+    width: 500px;
+    height: fit-content;
+    padding: 2rem 3rem;
+    background: rgb(12, 61, 63);
+    border: 2px solid  rgb(38, 167, 172);
+    border-radius: 10px;
+    margin: 2rem;
+    
+
+    > h2 {
+        font-size: 2rem;
+        color: bisque;
+    }
+
+    >h4 {
+        color: beige;
+    }
+
+    >p {
+            color: rgb(151, 151, 137);
+    }
+}

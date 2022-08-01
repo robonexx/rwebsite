@@ -6,7 +6,7 @@ import './Header.scss';
 export default function Header() {
   return (
     <div className='header'>
-      <h1>
+      <h1 href="/">
         {'< '}Kreative Coding{' >'}
       </h1>
       <Nav/>

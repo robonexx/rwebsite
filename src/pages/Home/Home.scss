@@ -1,0 +1,40 @@
+.home {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;   
+    background: rgb(230, 79, 9);   
+    width: 100%;
+    height: 100%;
+    color: white;
+
+   > .headline {
+    position: relative;
+        margin-top: 30vh;
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    > p {
+        font-size: 2rem;
+        color: white;
+    }
+
+    img {
+        max-width: 600px;
+        height: 400px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    section {
+        position: relative;
+       width: 100%;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: inherit;
+        }
+    }
+}

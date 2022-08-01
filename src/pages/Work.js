@@ -2,11 +2,11 @@ import React from 'react';
 import ProjectMenu from '../components/ProjectMenu';
 import vid from '../media/video/video.mp4';
 // styles
-import './Home.scss';
+import './Work.scss';
 
-export default function Home() {
+export default function Work() {
   return (
-    <div id='home' className='home'>
+    <div id='work' className='work'>
       <div className='container'>
         <video autoPlay loop muted>
           <source src={vid} type='video/mp4' />

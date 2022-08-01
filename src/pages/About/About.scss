@@ -1,0 +1,59 @@
+.about {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;   
+    background: rgb(39, 39, 39);   
+    width: 100%;
+    height: 100%;
+    color: white;
+   
+
+    >div {
+        height: 100vh;
+        background-color: red;
+
+        :nth-child(1) {
+            background-color: orange;
+            height: 50vh;
+        }
+        :nth-child(2) {
+            background-color: magenta;
+            height: 50vh;
+        }
+    }
+
+   > .headline {
+    position: relative;
+        margin-top: 30vh;
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    > p {
+        font-size: 2rem;
+        color: white;
+    }
+
+    img {
+        border: 4px solid orangered;
+        max-width: 600px;
+        height: 400px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    section {
+        position: relative;
+       width: 100%;
+       background-color: yellow;
+       overflow-x: hidden;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: inherit;
+        }
+       
+    }
+}

@@ -14,6 +14,8 @@ export default function ProjectMenu() {
   const handleClick = (e, url) => {
     e.preventDefault();
     setProjUrl(url);
+    let thisImg = document.getElementsByTagName('img');
+    e.target.bind(this.thisImg).style.opacity = '1';
   };
 
   return (

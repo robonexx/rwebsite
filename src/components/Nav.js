@@ -12,7 +12,7 @@ const navItems = [
   },
   {
     title: 'Work',
-    url: '#work',
+    url: '/work',
   },
   {
     title: 'About',
@@ -23,8 +23,8 @@ const navItems = [
     url: '/resources',
   },
   {
-    title: 'Contact',
-    url: '/contact',
+    title: 'NB',
+    url: '/nb',
   },
 ];
 
@@ -39,15 +39,15 @@ export default function Nav() {
               key={title}
               initial={{ opacity: 0, y: i % 2 === 0 ? -100 : 100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: i * 0.2 }}
+              transition={{ duration: 1, delay: i * 0.1 }}
               whileHover={{
                 scale: 1.2,
-                rotate: 15,
-                transition: { duration: 0.2 },
+                rotate: 5,
+                transition: { duration: 0.1 },
               }}
             >
               {' '}
-              {url != '#work' ? (
+              {url !== '#work' ? (
                 <>
                   <Link to={url} className='nav_links'>
                     {title}
