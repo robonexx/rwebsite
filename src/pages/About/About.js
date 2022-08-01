@@ -10,18 +10,18 @@ import Img5 from '../../media/img/knowledge.jpg'
 
 import './About.scss'
 import Logo from '../../components/Logo/Logo'
+import Logo2 from '../../components/Logo/Logo2'
 
-const About = () => {
-   
+const About = () => {  
   
     return (
       <motion.div className='about'>
         <div>
         <section style={{display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem'}}>
-           <Logo />
+        <Logo2/>
         </section>
-        <section>
-            some other stuff
+        <section style={{display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem'}}>          
+           <Logo />
         </section>         
         </div>
         <Content />        
