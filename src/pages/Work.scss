@@ -1,8 +1,11 @@
 .work {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
     position: relative;
     > .container {
         height: 92vh;
-        margin: 0;
+        margin-top: 8vh;
         padding: 0;
         box-sizing: border-box;
         position: relative;
@@ -15,8 +18,9 @@
             object-fit: cover;
             object-position: top center;
             box-sizing: border-box;
-            width: 100vw;
+            width: 100%;
             height: 100%;
+            overflow-x: hidden;
             z-index: -1;
         }
 
@@ -25,9 +29,9 @@
             inset: 0;
             display: grid;
             place-items: center;
-            background-color: #000;
+            background-color: rgb(0, 0, 0);
             color: #fff;
-            font-size: clamp(10rem, 15vw, 15vw);
+            font-size: clamp(10rem, 13vw, 13vw);
             text-align: left;
             font-weight: 900;
             font-family: 'Audiowide', cursive;
@@ -36,11 +40,20 @@
             line-height: clamp(10rem, 10vw, 10vw);
             text-shadow: 5px -2px 1px rgb(0, 0, 0);
             transition: all 0.6s ease-in-out;
-
+            text-transform: uppercase;
             &:hover {
-                font-size: clamp(10rem, 16vw, 16vw);
                 cursor: pointer;
             }
+
+            @media (max-width: '760px') {
+                font-size: clamp(3rem, 3vw, 3vw);
+            }
+        }
+
+        > section {
+            height: 100vh;
+            width: 100%;
+            background: red;
         }
     }
 }

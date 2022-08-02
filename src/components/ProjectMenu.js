@@ -35,14 +35,14 @@ export default function ProjectMenu() {
           </ul>
         </div>
       </div>
-      <motion.button
+     {/*  <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         className='btn'
         onClick={() => (modalOpen ? close() : open())}
       >
         Check project
-      </motion.button>
+      </motion.button> */}
       {modalOpen && (
         <Modal
           modalOpen={modalOpen}

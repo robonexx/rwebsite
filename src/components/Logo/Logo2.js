@@ -6,12 +6,12 @@ import './Logo.scss'
 const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: (i) => {
-      const delay = 1 + i * 0.5;
+      const delay = 1 + i * 0.1;
       return {
         pathLength: 1,
         opacity: 1,
-        fill: "black",
-        strokeWidth: "2",
+        fill: "orangered",
+        strokeWidth: 2,
         stroke: "black",
         transition: {
           pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },

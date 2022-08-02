@@ -3,12 +3,13 @@ import Nav from './Nav';
 
 // styles
 import './Header.scss';
+import Logo from './Logo/Logo';
 export default function Header() {
   return (
     <div className='header'>
-      <h1 href="/">
-        {'< '}Kreative Coding{' >'}
-      </h1>
+      <div className="header_logo" href="/">
+        {'< '}<Logo />{' >'}
+      </div>
       <Nav/>
     </div>
   );

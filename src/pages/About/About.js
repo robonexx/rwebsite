@@ -18,10 +18,11 @@ const About = () => {
       <motion.div className='about'>
         <div>
         <section style={{display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem'}}>
-        <Logo2/>
+        
+        <Logo />
         </section>
         <section style={{display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem'}}>          
-           <Logo />
+        <Logo2/>
         </section>         
         </div>
         <Content />        

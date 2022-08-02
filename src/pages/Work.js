@@ -12,11 +12,14 @@ export default function Work() {
           <source src={vid} type='video/mp4' />
         </video>
         <h1>
-          {'<'}Kreative
+          {'<'}Funkcamp
           <br />
-          #Coding{'>'}
+          #Sweden{'>'}
         </h1>
       </div>
+      <section>
+        
+      </section>
       <div className="project-container" id="work">
         <ProjectMenu />
       </div>

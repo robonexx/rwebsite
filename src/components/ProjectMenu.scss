@@ -15,6 +15,11 @@
         font-weight: 800;
         text-transform: uppercase;
         transition: transform 1s ease;
+
+        @media screen and (max-width: '760px') {
+            font-size: 2rem;
+            text-align: center;
+        }
     }
 }
 
@@ -30,6 +35,10 @@
         padding-bottom: 2rem;
         list-style-type: none;
 
+        @media screen and (max-width: '760px') {
+            padding-bottom: 1rem;
+        }
+
         &:first-child {
             margin-top: 20vh;
         }
@@ -39,20 +48,11 @@
 
             img {
                 opacity: 1;
-                transform: translateY(-50%)translateX(-20%);
-            }
+                transform: translateY(-50%)translateX(0%);
 
-            a {
-                color:silver;
-                text-shadow: 2px 4px 2px #234557;
-            }
-        }
-        &:active, &:focus {
-            cursor: pointer;
-
-            img {
-                opacity: 1;
-                transform: translateY(-50%)translateX(-20%);
+                @media screen and (max-width: '760px') {
+                    transform: translateY(-200%)translateX(-50%);
+                }
             }
 
             a {
@@ -71,6 +71,10 @@
             font-family: "Open Sans", serif;
             font-weight: 800;
             transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.22);
+
+            @media screen and (max-width: '760px') {
+                font-size:  clamp(2rem, 2.5vw, 52px);
+            }
         }
 
         img {
@@ -79,13 +83,18 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translateY(-50%) translateX(-30%);
+            transform: translateY(-50%) translateX(-50%);
             object-fit: contain;
             object-position: center;
             pointer-events: none;
             transition: transform 0.4s ease-out, opacity 0.5s ease-in;
             filter: brightness(0.8) contrast(0.8);
             opacity: 0;
+
+            @media screen and (max-width: '760px') {
+                width: 80vw;
+                transform: translateY(-50%) translateX(-50%);
+            }
         }
     }
 }
