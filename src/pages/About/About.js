@@ -1,28 +1,27 @@
 import {useRef, useState} from 'react'
-import {motion, useTransform, useSpring} from 'framer-motion'
+import {motion} from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import {useSpring, animated, config} from 'react-spring'
 
 import './About.scss'
 
 const About = () => {  
 const [lights, setLights] = useState(false)
 
+const { x } = useSpring({ config: { duration: 300 }, x: lights ? 1 : 0 });
 
-  const lightRef = useRef()
   const bgRef = useRef()
-  const bulpRef = useRef()
 
   const lightsOnOff = () => {
       setLights(!lights)
-      lights ? bgRef.current.style.backgroundColor = '#fafafa' : bgRef.current.style.backgroundColor = '#282828'
-      lights ? lightRef.current.style.backgroundColor = '#fafafa' : lightRef.current.style.backgroundColor = '#282828'
+      lights ? bgRef.current.style.backgroundColor = '#fafafa' : bgRef.current.style.backgroundColor = '#121212'
   }
     return (
       <motion.div className='about' ref={bgRef}>
         <button onClick={lightsOnOff}>
           On/Off
         </button>
-        <div className="lamp_container" ref={lightRef}>
+        <div className="lamp_container">
         <div className="lamp">
 <svg width="585" height="553" viewBox="0 0 585 553" fill="none" xmlns="http://www.w3.org/2000/svg">
 <ellipse cx="292.5" cy="285" rx="292.5" ry="268" fill={`url(${!lights ? '#radial' : '#dark'})`}/>
@@ -31,14 +30,22 @@ const [lights, setLights] = useState(false)
 <path d="M256 223.66C256 208.986 256 201.649 259.664 196.461C260.978 194.601 262.601 192.978 264.461 191.664C269.649 188 276.986 188 291.66 188V188C306.335 188 313.672 188 318.86 191.664C320.72 192.978 322.342 194.601 323.656 196.461C327.321 201.649 327.321 208.986 327.321 223.66V247.094H256V223.66Z" fill="#D9D9D9"/>
 <line x1="291.642" y1="168.226" x2="291.642" y2="0.11322" stroke="black" stroke-width="6"/>
 <defs>
-<radialGradient ref={bulpRef} id={!lights ? 'radial' : 'dark'} cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(291.712 308.838) rotate(-38.5056) scale(283.105 264.919)">
+<radialGradient id={!lights ? 'radial' : 'dark'} cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(291.712 308.838) rotate(-38.5056) scale(283.105 264.919)">
 <stop offset="0.380208" />
 <stop offset="0.947917" />
 </radialGradient>
 </defs>
 </svg>
     <svg className='light' fill={!lights ? '#e9c915' : '#121212'} xmlns="http://www.w3.org/2000/svg">
-          <path d={lights ? Light_path[0] : Light_path[1]} />
+         {/*  <path d={lights ? Light_path[0] : Light_path[1]} /> */}
+          <animated.path d={x.to({
+            range: [0, 1],
+            output: [
+              'M103.547 48.7736C103.547 75.2207 80.511 96.6604 52.0943 96.6604C23.6777 96.6604 0.64151 75.2207 0.64151 48.7736C0.64151 22.3264 23.6777 0.88678 52.0943 0.88678C80.511 0.88678 103.547 22.3264 103.547 48.7736Z',
+              'M104.547 48.7736C110 57 81.511 35 53.0944 35C24.6777 35 -6 59 1.64152 48.7736C1.64152 22.3264 24.6777 0.88678 53.0944 0.88678C81.511 0.88678 104.547 22.3264 104.547 48.7736Z'
+             
+            ],
+          })} />
         </svg>  
         </div>                
         </div>          
