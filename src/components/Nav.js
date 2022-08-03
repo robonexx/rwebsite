@@ -11,8 +11,8 @@ const navItems = [
     url: '/',
   },
   {
-    title: 'Work',
-    url: '/work',
+    title: 'Funkcamp',
+    url: '/funkcamp',
   },
   {
     title: 'About',

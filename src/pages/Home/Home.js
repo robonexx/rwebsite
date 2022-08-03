@@ -1,7 +1,7 @@
 import React from 'react';
 import FunkcampLogo from '../../components/Logo/FunkcampLogo';
 import ProjectMenu from '../../components/ProjectMenu';
-import vid from '../../media/video/tonygogo.mp4';
+import img from '../../media/img/beauty.jpg';
 // styles
 import './Home.scss';
 
@@ -9,16 +9,14 @@ export default function Home() {
   return (
     <div id='work' className='home'>
       <div className='container'>
-        <h4>Tony Gogo Roché Apinsa Willow Evann Manne Schütt</h4>
-        <video autoPlay loop muted>
-          <source src={vid} type='video/mp4' />
-        </video>
+        <h4>Some some </h4>
+        <img src={img} alt="butterfly"/>
         <h1>
-          Funkcamp
+          New webiste
           <br />
-          MARCH 2023
+          User experiences
           <br />
-          #Sweden#</h1>
+          Interfaces</h1>
       </div>
       <section>
         <FunkcampLogo />

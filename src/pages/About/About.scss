@@ -1,29 +1,70 @@
 .about {
+    box-sizing: border-box;
     position: relative;
     margin: 0 auto;
     padding: 0;   
-    background: rgb(39, 39, 39);   
+    background-color: #fafafa;   
     width: 100%;
+    min-height: 100vh;
     height: 100%;
-    color: white;
-    
-   
 
-    >div {
-        height: 100vh;
-        background-color: red;
+    button {
+        position: fixed;
+        z-index: 1000;
+        left: 35%;
+        top: 20vh;
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
 
-        :nth-child(1) {
-            background-color: orange;
-            height: 50vh;
-            overflow: hidden;
-        }
-        :nth-child(2) {
-            background-color: magenta;
-            height: 50vh;
-            overflow: hidden;
+        &:hover {
+            background: #d8d8d8;
         }
     }
+    
+   .lamp_container {
+    width: fit-content;
+    margin-top: 10vh;
+    position: relative;
+    background-color: #fafafa;
+
+    .lamp {
+        position: relative;        
+    }
+
+    .light {
+        position: absolute;
+        border: 6px solid transparent;
+        top: 45%;
+        left: 40%;
+        path {
+            fill-opacity: 0.6;
+            z-index: 100;
+        }
+      
+    }
+
+    #radial {      
+        :nth-child(1) {
+        stop-color: #DCCE50;
+        stop-opacity: 0.6;
+        }
+        :nth-child(2) {
+            stop-color: #fcfbf6;
+            stop-opacity: 0.2;
+        }
+    }  
+
+    #dark {      
+        :nth-child(1) {
+        stop-color: #2c2c2b;
+        stop-opacity: 0.6;
+        }
+        :nth-child(2) {
+            stop-color: #000000;
+            stop-opacity: 0.2;
+        }
+    }    
+   }
 
    > .headline {
     position: relative;
