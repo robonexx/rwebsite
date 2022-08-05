@@ -1,0 +1,70 @@
+.face {
+    position: relative;
+    top: 20%;
+    left: 5%;
+    z-index: 1;   
+    width: 280px;
+    height: 420px;
+}
+
+.face svg {
+    position: absolute;
+    z-index: 2;
+}
+
+.face .skin {
+    position: absolute;
+    z-index: -1;
+}
+
+.face >.eyes {
+    position: absolute;
+    top: 36%;
+    left: 28%;
+    display: flex; 
+    transform: rotate(5deg);  
+    z-index: 1;
+
+}
+
+.face .eyeball {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: circle(50% at center);
+    position: relative;
+    opacity: 0.8;
+    cursor: pointer;
+    margin: 0 1.75rem;
+    z-index: 1;
+}
+
+
+
+
+.face >.eyes .eye {
+    width: 20px;
+    height: 20px;
+    background-color: #0a040946;
+    position: relative;
+    border-radius: 50%;
+    display: block;
+    
+}
+
+.face .eyes .eye::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgb(0, 0, 0);
+    z-index: 100;
+
+}

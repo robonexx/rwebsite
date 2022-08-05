@@ -41,8 +41,8 @@ export default function Nav() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: i * 0.1 }}
               whileHover={{
-                scale: 1.2,
-                rotate: 5,
+                scale: 1.1,
+                rotate: 4,
                 transition: { duration: 0.1 },
               }}
             >

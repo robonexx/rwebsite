@@ -9,8 +9,7 @@ export default function Header() {
     <div className='header'>
       <div className="header_logo" href="/">
       <Logo /> 
-      </div>
-      
+      </div>      
       <Nav/>
     </div>
   );
