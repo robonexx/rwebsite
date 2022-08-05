@@ -37,7 +37,7 @@
     z-index: 1;   
     width: 280px;
     height: 420px;
-
+    cursor: pointer;
     @media screen and (max-width: '760px') {
         left: 0;
         transform: scale(0.6);
@@ -78,9 +78,6 @@
     margin: 0 1.75rem;
     z-index: 1;
 }
-
-
-
 
 .face >.eyes .eye {
     width: 20px;
@@ -124,3 +121,12 @@
         
     }
 }
+
+.box {
+    position: absolute;
+    z-index: 1000;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--accent);
+  }

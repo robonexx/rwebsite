@@ -1,4 +1,4 @@
-import {useState, useEffect, useRef} from 'react'
+
 import FunkcampLogo from '../../components/Logo/FunkcampLogo'
 import vid from '../../media/video/tonygogo.mp4'
 
