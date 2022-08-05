@@ -1,5 +1,6 @@
-
+import {useState} from 'react'
 import {motion} from 'framer-motion'
+import Robone from '../../components/Logo/Robone';
 // styles
 import './Home.scss';
 
@@ -7,8 +8,10 @@ import './Home.scss';
 
 export default function Home() {  
 
+  const [isOn, setIsOn] = useState(false)
+
   document.querySelector('body').addEventListener('mousemove', eyeball);
-function eyeball(event) {
+  function eyeball(event) {
     var eye = document.querySelectorAll('.eye');
     
     eye.forEach(function(eye) {
@@ -18,18 +21,25 @@ function eyeball(event) {
         let rotation = (radian * (180 / Math.PI) * -1) + 0; 
         eye.style.transform = "rotate("+ rotation + "deg)";
    })
-
-   console.log(event)
+  /*  console.log(event) */
 };
   return (
     <motion.div id='home' className='home'>
+      <motion.div className="box" onMouseEnter={() => {setIsOn(true)}} onMouseLeave={() => {setIsOn(false)}}>
+     {/*  <Robone /> */}
+     <div>You already know</div>
+      </motion.div>
+      
       <div className='container'>
-          <Talk />
-          <Face />        
+          <Talk isOn={isOn}/>
+          <Face />      
       </div>
+     
     </motion.div>
   );
 }
+
+
 
 const Face = () => {
   return (
@@ -78,13 +88,16 @@ const Face = () => {
   )
 }
 
-const Talk = () => (
-  <div className="talk">
-  <svg width="347" height="202" viewBox="0 0 347 202" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M179.097 202C271.827 202 347 156.781 347 101C347 45.2192 271.827 0 179.097 0C86.3672 0 11.1946 45.2192 11.1946 101C11.1946 113.692 15.0862 125.837 22.1908 137.027C16.2709 143.985 0.394264 164.774 0.394279 187.588C0.39428 189.75 0.350014 191.399 0.291146 192.603C0.0187033 194.165 -0.0296793 195.155 0.0142402 195.259C0.0581597 195.364 0.19438 194.583 0.291146 192.603C1.73001 184.354 9.41851 160.147 42.766 166.144C46.7565 166.861 49.9897 167.261 52.5614 167.39C83.3406 188.6 128.617 202 179.097 202Z" fill="#F8F0F0"/>
-  <text className="svgText" x="60" y="80">What´s up?!</text>
-  <text className="svgText" x="60" y="120">Time to groove?</text>
-  </svg>
-
-  </div>
-)
+const Talk = ({isOn}) => {
+ 
+  return (
+    <div className="talk">
+    <svg width="347" height="202" viewBox="0 0 347 202" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fillRule="evenodd" clipRule="evenodd" d="M179.097 202C271.827 202 347 156.781 347 101C347 45.2192 271.827 0 179.097 0C86.3672 0 11.1946 45.2192 11.1946 101C11.1946 113.692 15.0862 125.837 22.1908 137.027C16.2709 143.985 0.394264 164.774 0.394279 187.588C0.39428 189.75 0.350014 191.399 0.291146 192.603C0.0187033 194.165 -0.0296793 195.155 0.0142402 195.259C0.0581597 195.364 0.19438 194.583 0.291146 192.603C1.73001 184.354 9.41851 160.147 42.766 166.144C46.7565 166.861 49.9897 167.261 52.5614 167.39C83.3406 188.6 128.617 202 179.097 202Z" fill="#F8F0F0"/>
+    <text className="svgText" x="50" y="90">{!isOn ? 'What´s up?!' : 'Yeah Buddy!'}</text>
+    <text className="svgText" x="50" y="130">{!isOn ? 'Time to groove?' : 'You dig it, right?!'}</text>
+    </svg>
+  
+    </div>
+  )
+}

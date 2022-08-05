@@ -1,16 +1,11 @@
-.logo, .logo2, .funkcamp {
-width: 100%;
+.logo {
 display: flex;
 align-items: center;
 justify-content: center;
 overflow: hidden;
-transform: scale(0.7);
+transform: scale(0.4);
 
 @media screen and (max-width: '760px') {    
-    transform: scale(0.6);
+    transform: scale(0.5);
 }
-}
-
-.funkcamp {
-    transform: scale(1);
 }

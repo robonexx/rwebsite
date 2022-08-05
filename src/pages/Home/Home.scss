@@ -4,11 +4,23 @@
     overflow-x: hidden;
     position: relative;
     background-color: #F14019;
+
     
-    > .container {
+.box {
+    display: block;
+    width: 400px;
+    height: 200px;
+    background-color: lightgreen;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    z-index: 1001;
+}
+    
+    .container {
         height: 92vh;
         margin-top: 8vh;
-        padding: 0;
+        padding: 2rem;
         box-sizing: border-box;
         position: relative;
 
@@ -24,15 +36,16 @@
 
             @media (max-width: '760px') {
                 font-size: clamp(1rem, 2vw, 2vw);
-            }    
+            } 
 }    
+
 }
 }
 
 /* =================================== FACE  */
 .face {
     position: relative;
-    top: 20%;
+    top: 25%;
     left: 5%;
     z-index: 1;   
     width: 280px;
@@ -104,8 +117,10 @@
 
 .talk {
     position: absolute;
-    left: calc(21vw * 0.9);
+    left: 26vw;
     top: 2vh;
+    z-index: 10;
+    
 
     @media screen and (max-width: '760px') {
         left: 30%;
@@ -114,19 +129,10 @@
     }
 
     .svgText {
-        font-size: 2rem;
+        font-size: 1.6rem;
         fill: black;
         font-family: 'Odibee', sans-serif;
-        font-weight: 800;
-        
+        font-weight: 600;
+        transition: all 0.6s ease-in-out;
     }
 }
-
-.box {
-    position: absolute;
-    z-index: 1000;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: var(--accent);
-  }
