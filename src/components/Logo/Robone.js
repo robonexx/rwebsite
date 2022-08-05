@@ -89,6 +89,7 @@ export default function Robone() {
     initial={{ x: -400, opacity: 0, scale: 4}}
     animate={{ x: 0, opacity: 1, fill: '#fff', scale: 1}}
     transition={{delay: 1.2, duration: 1, ease: 'easeOut'}}
+    fill="white"
     />
     
     </motion.svg>
