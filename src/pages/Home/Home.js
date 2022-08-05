@@ -23,7 +23,7 @@ function eyeball(event) {
    console.log(event)
 };
   return (
-    <div id='home' className='home' ref={bodyRef}>
+    <div id='home' className='home'>
       <div className='container'>
         <Talk />
         <Face />        
